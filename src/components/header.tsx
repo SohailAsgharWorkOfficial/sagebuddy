@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo.svg";
 export default function Header() {
   return (
     <header className="w-full bg-white border-b">
@@ -34,7 +34,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <Link to="/">
-            <img src="/assets/logo.svg" alt="SageBuddy Logo" className="h-10 cursor-pointer" />
+            <img src={logo} alt="SageBuddy Logo" className="h-10 cursor-pointer" />
           </Link>
         </div>
 

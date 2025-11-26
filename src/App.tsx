@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 import Header from "../src/components/header";
 import Footer from "./components/Footer";
@@ -11,36 +11,36 @@ import StatsCircleSection from "./components/StatsCircleSection";
 import TestimonialSlider from "./components/TestimonialSlider";
 
 // Pages
-import SignIn from "./components/SignIn";
-import CreateAccount from "./components/CreateAccount"; // <-- Signup page
+// import SignIn from "./components/SignIn";
+// import CreateAccount from "./components/CreateAccount";
 import SuccessStories from "./pages/SuccessStories";
 import BusinessSolutions from "./pages/BusinessSolutions";
 import ContactUs from "./pages/ContactUs";
 import OurTeam from "./pages/OurTeam";
 
 function App() {
-  const location = useLocation();
+  // const location = useLocation();
 
-  // Hide header/footer ONLY for SignIn + SignUp
-  const hideHeaderFooter =
-    location.pathname === "/" || location.pathname === "/signup";
+  // const hideHeaderFooter =
+  //   location.pathname === "/" || location.pathname === "/signup";
 
   return (
     <div className="w-full">
 
       {/* Header hide on SignIn + SignUp */}
-      {!hideHeaderFooter && <Header />}
+      {/* {!hideHeaderFooter && <Header />} */}
+      <Header />
 
       <Routes>
-        {/* SignIn Page */}
-        <Route path="/" element={<SignIn />} />
+        
+        {/* <Route path="/" element={<SignIn />} />
 
-        {/* SignUp Page */}
-        <Route path="/signup" element={<CreateAccount />} />
+        
+        <Route path="/signup" element={<CreateAccount />} /> */}
 
         {/* Home Page */}
         <Route
-          path="/home"
+          path="/"
           element={
             <>
               <Hero />
@@ -60,7 +60,8 @@ function App() {
       </Routes>
 
       {/* Footer hide on SignIn + SignUp */}
-      {!hideHeaderFooter && <Footer />}
+      {/* {!hideHeaderFooter && <Footer />} */}
+      <Footer />
     </div>
   );
 }
